@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- * main - this is the only function
- * Description: It will print the last digit of the number stored in n
- * Return: The function returns 0
- */
+* main - this is the only function
+* Description: It will print the last digit of the number stored in n
+* Return: The function returns 0
+*/
 int main(void)
 {
 int n, lastDig;
