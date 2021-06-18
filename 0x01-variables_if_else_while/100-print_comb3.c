@@ -1,32 +1,34 @@
+  
 #include <stdio.h>
 
 /**
- * main - Entry point for writing all numbers between 0 and 100,
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int first;
-	int second;
+int c = 0;
+int f_d;
+int l_d;
 
-	for (first = 0; first <= 9; first++)
-	{
-		for (second = 0; second <= 9; second++)
-		{
-			putchar(first + '0');
-			putchar(second + '0');
-			if (first == 9 && second == 9)
-			{
-			break;
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+while (c <= 99)
+{
+f_d = (c / 10 + '0');
+l_d = (c % 10 + '0');
+
+if (f_d < l_d)
+{
+putchar(f_d);
+putchar(l_d);
+if (c != 89)
+{
+putchar(',');
+putchar(' ');
+}
+}
+c++;
+}
+putchar('\n');
+return (0);
 }
