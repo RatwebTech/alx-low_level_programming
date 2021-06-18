@@ -5,7 +5,7 @@
 /**
 * main - this is a function
 * Description: It will print the last digit of the random number n
-* return: The function returns o
+* Return: The function returns o
 */
 int main(void)
 {
@@ -21,7 +21,7 @@ else if (lastDig == 0)
 {
 printf("Last digit of %d and is 0%\n", n, lastDig);
 }
-else (lastDig < 6 && !lastDig == 0)
+else if (lastDig < 6 && !lastDig == 0)
 {
 printf("Last digit of %d and is less than 6 and not 0\\n", n, lastDig);
 }
