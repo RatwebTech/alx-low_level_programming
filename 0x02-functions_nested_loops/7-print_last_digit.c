@@ -10,17 +10,15 @@
  */
 int print_last_digit(int y)
 {
-int l;
-
-l = y % 10;
-if (1 < 0)
+if (y > 0 || y == 0)
 {
-_putchar(-l + 48);
-return (-l);
+_putchar (y % 10 + '0');
+return (y % 10);
 }
 else
 {
-_putchar(l + 48);
-return (l);
+y = y * -1;
+_putchar (y % 10 + '0');
+return (y % 10);
 }
 }
