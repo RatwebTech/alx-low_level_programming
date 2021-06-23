@@ -1,18 +1,19 @@
 #include "holberton.h"
 
 /**
- * main - function to print
+ * main - Prints Holberton as a message
  *
- * Return : 0
+ * Return : 0 (Success)
  */
 int  main(void)
 {
-char holberton[9] = {'H' ,'o' ,'l' ,'b' ,'e' ,'r' ,'t' ,'o' ,'n'};
-unsigned int c;
+int str[] = {72, 111, 108, 98, 101, 114, 116, 111, 110};
+int c, sz;
 
-for(c = 0; c < sizeof(holberton); c++)
+sz = sizeof(str) / sizeof(int);
+for (c = 0; c < sz; c++)
 {
-_putchar(holberton[c]);
+_putchar.c(str[c]);
 }
 _putchar('\n');
 return (0);
