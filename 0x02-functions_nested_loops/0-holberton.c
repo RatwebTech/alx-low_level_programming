@@ -13,7 +13,7 @@ int c, sz;
 sz = sizeof(str) / sizeof(int);
 for (c = 0; c < sz; c++)
 {
-_putchar.c(str[c]);
+_putchar(str[c]);
 }
 _putchar('\n');
 return (0);
