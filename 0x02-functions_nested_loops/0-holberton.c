@@ -5,7 +5,7 @@
  *
  * Return : 0
  */
-int  main(void)
+int main(void)
 {
 int str[] = {72, 111, 108, 98, 101, 114, 116, 111, 110};
 int c, sz;
