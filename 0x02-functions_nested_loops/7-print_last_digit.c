@@ -1,8 +1,7 @@
 #include "holberton.h"
 
 /**
- *print_last_digit - Prints the last digit
- *of a number
+ *print_last_digit - Prints the last digit of a number
  *
  *@y: input number is an integer.
  *
