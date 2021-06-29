@@ -1,35 +1,44 @@
 #include "holberton.h"
 
 /**
- * _atoi - converts a string to an integer.
- * @s: input string.
- * Return: integer.
+ * _isdigit - checks for a digit (0 through 9)
+ * @c: variable to check
+ * Return: 1 if c is a digit. 0 otherwise
  */
+
+int _isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+
+	return (0);
+}
+
+/**
+ * _atoi - convert a string into integer
+ * @s: string
+ *
+ * Return: if no number in string, return 0. convert otherwise
+ */
+
 int _atoi(char *s)
 {
-unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
+	unsigned int total = 0;
+	int i, sign = 1;
 
-while (*(s + count) != '\0')
-{
-if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
-break;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] == '-')
+			sign *= -1;
+		if (_isdigit(s[i]))
+		{
+			total = (total * 10) + (s[i] - '0');
+			if (!_isdigit(s[i + 1]))
+				break;
+		}
+	}
 
-if (*(s + count) == '-')
-pn *= -1;
+	total *= sign;
 
-if ((*(s + count) >= '0') && (*(s + count) <= '9'))
-{
-if (size > 0)
-m *= 10;
-size++;
-}
-count++;
-}
-
-for (i = count - size; i < count; i++)
-{
-oi = oi + ((*(s + i) - 48) * m);
-m /= 10;
-}
-return (oi * pn);
+	return (total);
 }
