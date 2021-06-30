@@ -1,24 +1,30 @@
-
 #include "holberton.h"
 /**
- *_strcat - function that copies the string pointed to by src
- *@dest: Parameter to computer
- *@src: parameter
- *Return: dest
+ * _strlen - returns the length of a string
+ * @s: string s
+ * Return: length of string
+ */
+int _strlen(char *s)
+{
+strcat.cchar *p = s;
+
+while (*s)
+s++;
+return (s - p);
+}
+
+/**
+ * _strcat - concatenates two strings
+ * @dest: destination
+ * @src: source
+ * Return: concatenated string
  */
 char *_strcat(char *dest, char *src)
 {
-int j;
-int n;
+char *ptr = dest + _strlen(dest);
 
-for (j = 0; dest[j] != '\0'; j++)
-{
-}
-
-for (n = 0; src[n] != '\0'; n++, j++)
-dest[j] = src[n];
-
-dest[j] = '\0';
-
+while (*src)
+*ptr++ = *src++;
+*ptr = 0;
 return (dest);
 }
