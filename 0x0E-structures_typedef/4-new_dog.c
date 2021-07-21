@@ -25,7 +25,7 @@ if (doggo == 0)
 free(doggo);
 return (NULL);
 }
-doggo->name = malloc(a * sizeof(doggo->name));
+doggo->name = malloc(a *sizeof(doggo->name));
 if (doggo->name == 0)
 {
 free(doggo->name);
@@ -36,7 +36,7 @@ for (c = 0; c < a; c++)
 doggo->name[c] = name[c];
 doggo->name[c] = name[c];
 doggo->age = age;
-doggo->owner = malloc(b * sizeof(doggo->owner));
+doggo->owner = malloc(b *sizeof(doggo->owner));
 if (doggo->owner == 0)
 {
 free(doggo->owner);
