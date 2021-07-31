@@ -14,7 +14,7 @@ size_t n_nodes = 0;
 
 temp = h;
 while (temp != NULL)
-    {
+{
 printf("[%u] ", temp->len);
 if (!temp->str)
 printf("(nil)\n");
